@@ -45,7 +45,7 @@ body {
     width: 100%;
 }
 
-.header-logo {
+.header-logo a{
     color: black;
     font-size: 2rem;
     font-weight: bold;
