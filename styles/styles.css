@@ -212,6 +212,18 @@ body {
     margin-top: .5rem;
 }
 
+.footer-rsss-twitter i{
+    color: black;
+}
+
+.footer-rsss-insta i{
+    color: #E1306C;
+}
+
+.footer-rsss-face i{
+    color: #3b5998;
+}
+
 @media (max-width: 1000px) {
     html {
         font-size: calc(0.4rem + 1vw);
