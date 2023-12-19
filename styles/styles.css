@@ -18,10 +18,14 @@ body {
 }
 
 :root {
-    --background-button: rgb(41, 141, 180);
+    --bg-main: #c37a32;
+    --bg-button: #e1903f;
     --hover-button: #FFA64C;
 }
 
+main {
+    background-color: var(--bg-main);
+}
 
 /*HEADER*/
 .header {
@@ -87,7 +91,7 @@ body {
 }
 
 .header-menu.principal li:hover a {
-    color: var(--background-button);
+    color: var(--bg-button);
 }
 
 .responsive-menu, .responsive-bars {
@@ -98,7 +102,7 @@ body {
 
 /*CONTENT*/
 .content-hero {
-    background-image: url('../images/hero.png');
+    background-image: url('../images/stacked-waves-haikei.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -110,18 +114,6 @@ body {
     flex-direction: column;
     position: relative;
     padding-left: 5%;
-}
-
-.content-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,0.8240546218487395) 0%, rgba(0,0,0,0.4739145658263305) 53%, rgba(164,255,0,0) 100%);
-    z-index: 1;
 }
 
 .content-hero > * {
@@ -144,16 +136,16 @@ body {
 
 .contact-button {
     transition: all .2s ease;
-    border: 3px solid var(--background-button);
+    border: 3px solid var(--bg-button);
 }
 
 .contact-button a{
-    color: var(--background-button);
+    color: var(--bg-button);
     font-size: 1.3rem;
 }
 
 .contact-button:hover{
-    background-color: var(--background-button);
+    background-color: var(--bg-button);
 }
 
 .contact-button:hover a{
@@ -173,14 +165,27 @@ body {
 }
 
 .contact-button.hero:hover a{
-    color: black;
+    color: var(--bg-main);
 }
 
 
 /* FOOTER */
 .footer {
     padding: 1rem 5%;
-    border-top: 1px solid gainsboro;
+    background-image: url('../images/fondo-footer.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 100vw;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer * {
+    color: white;
 }
 
 .footer-call {
@@ -208,7 +213,6 @@ body {
 
 .footer-copy {
     text-align: center;
-    color: gray;
     margin-top: .5rem;
 }
 
