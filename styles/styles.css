@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     max-width: 100vw;
 }
 
@@ -25,6 +24,18 @@ body {
 
 main {
     background-color: var(--bg-main);
+}
+
+main > section {
+    padding: 5%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin-bottom: 0;
 }
 
 /*HEADER*/
@@ -84,6 +95,7 @@ main {
     border-radius: 45px;
     padding: 10px 20px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .contact-button a {
@@ -106,7 +118,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 70vh;
+    height: 100vh;
     max-width: 100vw;
     display: flex;
     justify-content: center;
@@ -124,6 +136,7 @@ main {
 .content-hero h1 {
     font-size: 4rem;
     color: white;
+    font-weight: bold;
 }
 
 .content-hero h3 {
@@ -177,11 +190,7 @@ main {
     background-position: center;
     background-size: cover;
     max-width: 100vw;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    padding-bottom: 200px;
 }
 
 .footer * {
@@ -228,6 +237,71 @@ main {
     color: #3b5998;
 }
 
+/*FEATURED INSTRUMENTS*/
+.title {
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.card {
+    border-radius: 40px;
+    background-color: white;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.card-image {
+    height: 60%;
+    border: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card-image img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.card-content {
+    max-height: 40%;
+    padding: .5rem 1rem;
+}
+
+.card-title {
+    font-weight: bold;
+    color: rgb(41, 141, 180);
+}
+
+.card-category {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: white;
+    background-color: rgb(41, 141, 180);
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+.card-description {
+    font-size: .7rem;
+}
+
+
 @media (max-width: 1000px) {
     html {
         font-size: calc(0.4rem + 1vw);
@@ -257,6 +331,7 @@ main {
         flex-direction: column;
         align-items: start;
         margin-top: 2rem;
+        padding-left: 0;
     }
 
     .header {
@@ -264,10 +339,38 @@ main {
     }
 
     .content-hero h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
     
     .content-hero h3 {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width:768px) {
+
+    .content-hero {
+        height: 50vh;
+    }
+
+    .content-hero h1 {
+        text-align: center;
+    }
+    
+    .content-hero h3 {
+        text-align: center;
+        margin: 0 auto 3rem auto;
+    }
+
+    .contact-button.hero {
+        margin: 0 auto;
+    }
+
+    .card {
+        height: 300px;
+    }
+
+    .card-description {
+        font-size: 1rem;
     }
 }
