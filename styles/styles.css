@@ -20,6 +20,7 @@ body {
     --bg-main: #c37a32;
     --bg-button: #e1903f;
     --hover-button: #FFA64C;
+    --secondary-color: rgb(41, 141, 180);
 }
 
 main {
@@ -247,7 +248,7 @@ ul {
 .description {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     color: white;
 }
 
@@ -284,7 +285,7 @@ ul {
 
 .card-title {
     font-weight: bold;
-    color: rgb(41, 141, 180);
+    color: var(--secondary-color)
 }
 
 .card-category {
@@ -292,7 +293,7 @@ ul {
     top: 15px;
     right: 20px;
     color: white;
-    background-color: rgb(41, 141, 180);
+    background-color: var(--secondary-color);
     border-radius: 20px;
     padding: 3px 10px;
 }
@@ -350,7 +351,7 @@ ul {
 @media (max-width:768px) {
 
     .content-hero {
-        height: 50vh;
+        height: 60vh;
     }
 
     .content-hero h1 {
