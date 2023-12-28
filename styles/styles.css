@@ -135,17 +135,18 @@ ul {
 }
 
 .content-hero h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
     font-weight: bold;
 }
 
 .content-hero h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     font-style: italic;
     margin-bottom: 2rem;
     color: white;
+    width: 70%;
 }
 
 .contact-button {
@@ -340,11 +341,12 @@ ul {
     }
 
     .content-hero h1 {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
     
     .content-hero h3 {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        width: 100%;
     }
 }
 
