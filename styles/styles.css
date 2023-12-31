@@ -315,7 +315,6 @@ h1, h2, a {
     text-align: center;
     text-transform: uppercase;
     font-family: "Larken";
-    color: var(--secondary-color);
 }
 
 .card-cat {
