@@ -68,7 +68,7 @@
 
             <div class="team-gallery">
                 <div class="team-gallery-item">
-                    <img src="https://placehold.co/600x400?font=montserrat" alt="Team 1 image">
+                    <img src="https://placehold.co/600x400?font=montserrat" alt="Team 1 image" data-zoomable>
                     <span>Lorem ipsum dolor</span>
                     <p>LOREM</p>
                 </div>
@@ -130,6 +130,21 @@
         </div>
         
     </footer>
+
+    <!-- medium-zoom.js -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.3/dist/medium-zoom.min.js"></script>
+    <script>
+        const images = Array.from(document.querySelectorAll("main img"));
+        images.forEach(img => {
+            mediumZoom(img, {
+                margin: 0,
+                background: "#fff",
+                scrollOffset: 40,
+                container: null,
+                template: null 
+            });
+        });
+    </script>
 
 </body>
 </html>

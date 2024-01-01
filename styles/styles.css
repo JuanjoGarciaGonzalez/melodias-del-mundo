@@ -373,7 +373,7 @@ h1, h2, a {
 
 .cta-desc {
     font-size: 1.5rem;
-    width: 70%;
+    width: 60%;
     opacity: .8;
     font-weight: bold;
 }
@@ -527,6 +527,24 @@ h1, h2, a {
     margin-bottom: 2rem;
     font-size: 1.3rem;
 }
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+@keyframes circle {
+    0% {r: 83.1579;}
+    50% {r: 100;}
+    100% {r: 83.1579;}
+  }
+  
+circle {
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+  
 
 @media (min-width: 1700px) {
     .footer {

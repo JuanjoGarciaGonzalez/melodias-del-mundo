@@ -110,27 +110,27 @@
                 <h2 class="title">FAQ'S</h2>
             </div>
             <div class="col-12 col-md-9">
-                <details>
+                <details name="faq" open>
                     <summary>FAQ 1: Frequently Asked Question 1?</summary>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </details>
         
-                <details>
+                <details name="faq">
                     <summary>FAQ 2: Frequently Asked Question 2?</summary>
                     <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </details>
         
-                <details>
+                <details name="faq">
                     <summary>FAQ 3: Frequently Asked Question 3?</summary>
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </details>
         
-                <details>
+                <details name="faq">
                     <summary>FAQ 4: Frequently Asked Question 4?</summary>
                     <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </details>
         
-                <details>
+                <details name="faq">
                     <summary>FAQ 5: Frequently Asked Question 5?</summary>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                 </details>
@@ -144,7 +144,7 @@
                 <div class="my-5"><div class="cta-button"><a href="products.html">#Lorem</a></div></div>
             </div>
             
-            <img src="images/cta-image.svg" alt="Shape form" class="cta-image">
+            <svg class="cta-image" width="1079" height="472" viewBox="0 0 1079 472" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 236C0 370.721 100.324 472 236.956 472C237.775 472 842.989 471.996 843.807 471.989C979.183 470.783 1078.31 369.912 1078.31 236C1078.31 101.29 980.348 1.43068 844.284 0.0152374C843.308 0.00508521 237.935 0 236.956 0C99.3685 0 0 100.324 0 236ZM958.873 236C958.873 310.39 910.616 360.651 844.284 362.09C843.31 362.111 237.937 362.121 236.956 362.121C169.117 362.121 119.433 311.482 119.433 236C119.433 160.518 169.117 109.879 236.956 109.879C237.937 109.879 843.31 109.889 844.284 109.91C910.616 111.349 958.873 161.611 958.873 236Z" fill="#FA5046"></path><circle cx="251.307" cy="236.48" r="83.1579" fill="#FA5046"></circle></svg>
         </section>
 
         <div style="height: 100px;"></div>
@@ -162,6 +162,21 @@
         </div>
         
     </footer>
+
+        <!-- medium-zoom.js -->
+        <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.3/dist/medium-zoom.min.js"></script>
+        <script>
+            const images = Array.from(document.querySelectorAll(".featured-cards img"));
+            images.forEach(img => {
+                mediumZoom(img, {
+                    margin: 0,
+                    background: "#fff",
+                    scrollOffset: 40,
+                    container: null,
+                    template: null
+                });
+            });
+        </script>
 
 </body>
 </html>
