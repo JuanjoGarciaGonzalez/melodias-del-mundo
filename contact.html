@@ -73,7 +73,7 @@
                 <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nobis sunt quidem officiis rerum debitis id veritatis quas, magnam non?</p>
 
                 <ul class="contact-info">
-                    <li><a href="tel:000000000"><i class="fa-solid fa-mobile"></i> +34 000000000</a></li>
+                    <li><a href="tel:999999999"><i class="fa-solid fa-mobile"></i> +34 999 999 999</a></li>
                     <li><a href="mail:info@musicco.com"><i class="fa-solid fa-share"></i> info@musicco.com</a></li>
                 </ul>
             </div>
@@ -86,6 +86,22 @@
         <section class="contact-form">
             <h2 class="title center">Request info</h2>
             <p class="description center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            <form action="" method="POST" id="contact-form" class="row gx-0 gx-md-5 mt-5">
+                <div class="col-12 col-md-6">
+                    <input type="text" name="name" placeholder="Name" maxlength="50" pattern="[A-Za-z\s]+" title="Name should only contain letters. Max 50 characters." required>
+                    <input type="email" name="email" placeholder="Email" maxlength="100" required>
+                    <input type="tel" name="mobile" placeholder="Mobile" pattern="[0-9]+" maxlength="15" title="Mobile number should only contain numbers. Max 15 digits." required>
+                    
+                    <input type="submit" value="Send" class="contact-form-button d-none d-md-inline">
+                </div>
+                <div class="col-12 col-md-6">
+                    <textarea name="comment" cols="30" rows="13" placeholder="Comment" maxlength="500" required></textarea>
+                </div>
+                
+                <input type="submit" value="Send" class="contact-form-button d-md-none">
+            </form>
+            
         </section>
     </main>
 
