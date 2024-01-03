@@ -736,18 +736,31 @@ circle {
     }
 
     section.clearfix {
-        padding: 5%;
+        padding: 7%;
     }
 
     .contact-form form {
         width: 100%;
+    }
+
+    .contact {
+        height: auto;
+    }
+
+    .contact-map {
+        height: 40vh;
+        padding-top: 3rem;
+    }
+
+    .footer {
+        padding-bottom: 400px;
     }
 }
 
 @media (max-width:768px) {
 
     .content-hero {
-        height: 75vh;
+        height: 100vh;
     }
 
     .content-hero h1 {
@@ -826,12 +839,7 @@ circle {
         padding: 10%;
     }
 
-    .contact {
-        height: auto;
-    }
-
-    .contact-map {
-        height: 40vh;
-        padding-top: 3rem;
+    .footer {
+        padding-bottom: 300px;
     }
 }
