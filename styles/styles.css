@@ -29,6 +29,8 @@ body {
     --bg-button: #e1903f;
     --hover-button: #FFA64C;
     --secondary-color: #FA5046;
+    --blue: #1E90FF;
+    --green: #32CD32;
 }
 
 main {
@@ -299,6 +301,7 @@ h1, h2, a {
     color: white;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: "Larken";
 }
 
 .description {
@@ -317,7 +320,7 @@ h1, h2, a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
+    height: 500px;
 }
 
 .card:hover img {
@@ -659,13 +662,214 @@ circle {
     padding: 10px 20px;
     font-size: 1.3rem;
     text-align: center;
-    width: 50px;
     margin: 0 auto;
 }
 
 .contact-form-button:hover {
     background-color: white;
     color: var(--bg-main);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--secondary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.plans-selector {
+    gap: 1rem;
+}
+
+.plans-cards {
+    margin-top: 100px;
+    gap: 1rem;
+}
+
+.card-plan {
+    border-radius: 40px;
+    background-color: white;
+    padding: 1.5rem;
+    overflow: hidden;
+    min-width: 25%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 6px 6px 0px #00000060;
+    gap: 2rem;
+    background-image: radial-gradient(circle at center center, rgba(214, 239, 255, 0.23), #feffff), repeating-radial-gradient(circle at center center, rgba(214, 239, 255, 0.23), rgba(214, 239, 255, 0.23), 32px, transparent 64px, transparent 32px);
+    background-blend-mode: multiply;
+    background-color: #feffff;
+}
+
+@media(min-width: 768px) {
+    .card-plan:nth-of-type(2) {
+        transform: scale(1.15);
+        z-index: 1;
+    }
+}
+
+.card-plan-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-plan-title.green{
+    color: var(--green);
+}
+
+.card-plan-title.red{
+    color: var(--secondary-color);
+}
+
+.card-plan-title.blue{
+    color: var(--blue);
+}
+
+.card-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.card-currency {
+    position: absolute;
+    top: .5rem;
+    left: -25px;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.card-money {
+    font-size: 3.5rem;
+    text-align: center;
+}
+
+.card-month {
+    display: block;
+    font-size: 2rem;
+    margin-top: -20px;
+    text-align: center;
+}
+
+.card-list {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+.card-plan-footer.blue {
+    border-color: var(--blue);
+    background-color: var(--blue);
+
+    a {
+        color: white;
+    }
+
+    &:hover {
+        background-color: white;
+        border-color: var(--blue);
+
+        a {
+            color: var(--blue);
+        }
+    }
+}
+
+.card-plan-footer.green {
+    border-color: var(--green);
+    background-color: var(--green);
+
+    a {
+        color: white;
+    }
+
+    &:hover {
+        background-color: white;
+        border-color: var(--green);
+
+        a {
+            color: var(--green);
+        }
+    }
+}
+
+.card-plan-footer.red {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+
+    a {
+        color: white;
+    }
+
+    &:hover {
+        background-color: white;
+        border-color: var(--secondary-color);
+
+        a {
+            color: var(--secondary-color);
+        }
+    }
 }
 
 @media (min-width: 1700px) {
@@ -842,4 +1046,14 @@ circle {
     .footer {
         padding-bottom: 300px;
     }
+
+    .plans-cards {
+        gap: 1rem;
+        margin-top: 50px;
+    }
+
+    .card-plan {
+        width: 100%;
+    }
+    
 }
