@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let moneyCheckbox = document.getElementById('moneyCheckbox');
 
-    moneyCheckbox.addEventListener('change', changeMoney);
+    if(moneyCheckbox) {
+        moneyCheckbox.addEventListener('change', changeMoney);
+    }
 
     function changeMoney() {
         var moneyValueBasic = document.getElementById('card-money-basic');
